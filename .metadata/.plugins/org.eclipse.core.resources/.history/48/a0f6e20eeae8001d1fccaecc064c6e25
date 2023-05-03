@@ -1,0 +1,74 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Helloworld {
+    public static int Moltiplica(int a, int b) {
+        return a * b;
+    }
+
+    public static String Concatena(String s, int n) {
+        return s + Integer.toString(n);
+    }
+
+    public static String[] inseriscilnArray(String[] arr, String s) {
+        String[] result = new String[6];
+        for (int i = 0; i < arr.length; i++) {
+            if (i < 3) {
+                result[i] = arr[i];
+            } else if (i == 3) {
+                result[i] = s;
+            } else {
+                result[i + 2] = arr[i];
+            }
+        }
+        return result;
+    }
+
+    public static double perimetroRettangolo(double lato1, double lato2) {
+        return (lato1 + lato2) * 2;
+    }
+
+    public static int pariDispari(int numero) {
+        return numero % 2;
+    }
+
+    public static double areaTriangolo(double latoA, double latoB, double latoC) {
+        double semiperimetro = (latoA + latoB + latoC) / 2;
+        double area = Math.sqrt(semiperimetro * (semiperimetro - latoA) * (semiperimetro - latoB) * (semiperimetro - latoC));
+        return area;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Esercizio 3
+        System.out.println("Inserisci tre stringhe:");
+        String str1 = scanner.nextLine();
+        String str2 = scanner.nextLine();
+        String str3 = scanner.nextLine();
+        String concatenazione = str1 + str2 + str3;
+        System.out.println("La concatenazione in ordine di inserimento è: " + concatenazione);
+        String concatenazioneInversa = str3 + str2 + str1;
+        System.out.println("La concatenazione in ordine inverso è: " + concatenazioneInversa);
+
+        // Esercizio 4
+        System.out.println("Inserisci la lunghezza dei due lati del rettangolo:");
+        double lato1 = scanner.nextDouble();
+        double lato2 = scanner.nextDouble();
+        double perimetroRettangolo = perimetroRettangolo(lato1, lato2);
+        System.out.println("Il perimetro del rettangolo è: " + perimetroRettangolo);
+
+        System.out.println("Inserisci un numero:");
+        int numero = scanner.nextInt();
+        int pariDispari = pariDispari(numero);
+        System.out.println("Il numero è " + (pariDispari == 0 ? "pari" : "dispari"));
+
+        System.out.println("Inserisci la lunghezza dei lati del triangolo:");
+        double latoA = scanner.nextDouble();
+        double latoB = scanner.nextDouble();
+        double latoC = scanner.nextDouble();
+        double areaTriangolo = areaTriangolo(latoA, latoB, latoC);
+        System.out.println("L'area del triangolo è: " + areaTriangolo);
+
+        // Moltiplica
+        System.out.println("Inserisci due numeri
