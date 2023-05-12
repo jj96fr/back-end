@@ -1,4 +1,4 @@
-package Esercizio;
+package Esercizio2;
 
 public class Sim {
 private int numero;

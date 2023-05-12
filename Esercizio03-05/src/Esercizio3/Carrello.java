@@ -1,8 +1,5 @@
-package Esercizio;
+package Esercizio3;
 
 public class Carrello {
-	private String cliente;
-	private double totale;
-	private String[] elencoArticoli;
-
+	
 }
